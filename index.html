@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Upstate Laundromat" content="Modern and upscale laundromat">
+    <style>
+        @font-face {
+            font-family: filson-soft;
+            src: url(https://use.typekit.net/af/672b42/00000000000000003b9ade59/27/l?subset_id=2&fvd=n3&v=3) format("woff2"), url(https://use.typekit.net/af/672b42/00000000000000003b9ade59/27/d?subset_id=2&fvd=n3&v=3) format("woff"), url(https://use.typekit.net/af/672b42/00000000000000003b9ade59/27/a?subset_id=2&fvd=n3&v=3) format("opentype");
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+        @font-face {
+            font-family: filson-soft;
+            src: url(https://use.typekit.net/af/277d7a/00000000000000003b9ade63/27/l?subset_id=2&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/277d7a/00000000000000003b9ade63/27/d?subset_id=2&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/277d7a/00000000000000003b9ade63/27/a?subset_id=2&fvd=n4&v=3) format("opentype");
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+        @font-face {
+            font-family: filson-soft;
+            src: url(https://use.typekit.net/af/5fe107/00000000000000003b9ade62/27/l?subset_id=2&fvd=n5&v=3) format("woff2"), url(https://use.typekit.net/af/5fe107/00000000000000003b9ade62/27/d?subset_id=2&fvd=n5&v=3) format("woff"), url(https://use.typekit.net/af/5fe107/00000000000000003b9ade62/27/a?subset_id=2&fvd=n5&v=3) format("opentype");
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+        @font-face {
+            font-family: filson-soft;
+            src: url(https://use.typekit.net/af/0ceada/00000000000000003b9ade5c/27/l?subset_id=2&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/0ceada/00000000000000003b9ade5c/27/d?subset_id=2&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/0ceada/00000000000000003b9ade5c/27/a?subset_id=2&fvd=n7&v=3) format("opentype");
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?subset_id=2&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?subset_id=2&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?subset_id=2&fvd=n4&v=3) format("opentype");
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?subset_id=2&fvd=n5&v=3) format("woff2"), url(https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?subset_id=2&fvd=n5&v=3) format("woff"), url(https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?subset_id=2&fvd=n5&v=3) format("opentype");
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?subset_id=2&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?subset_id=2&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?subset_id=2&fvd=n7&v=3) format("opentype");
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: auto;
+        }
+    </style>
+    <link rel="icon"
+        href="https://images.squarespace-cdn.com/content/v1/5acd6b71da02bcf0fc160fce/1530034622331-9ANEHL5XZC4QAQWDXPLM/favicon.ico?format=100w">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Upstate Laundromat</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header active" id="header">
+            <div class="header__container container">
+                <div class="header__burger burger">
+                    <span></span><span></span><span></span>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item ">
+                            <a href="#header" class="menu__link" data-link="nav" aria-label="home"> <i
+                                    class="home-link"></i></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#features" class="menu__link" data-link="nav">Services</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#we-offer" class="menu__link" data-link="nav">Amenities</a>
+                        </li>
+                        <li class="menu__list-item logo">
+                            <a href="#home" class="menu__link" aria-label="home"><img
+                                    src="./images/header/header-logo.png" alt="Upstate Laundromat"></a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#testimonials" class="menu__link" data-link="nav">Testimonials</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#questions" class="menu__link" data-link="nav">FAQ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#contact" class="menu__link" data-link="nav" aria-label="contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero-section" id="hero-section">
+                <div class="hero-section__container container">
+                    <div class="hero-section__content">
+                        <h3 class="hero-section__head">Modern & upscale laundromat</h3>
+                        <h1 class="hero-section__description">A Better Place to do Your Laundry</h1>
+                        <a href="#contact" class="hero-section__link">
+                            <i class="fa"></i><span>View Location</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="features" id="features">
+                <div class="features__container container">
+                    <ul class="features__items">
+                        <li class="features__item card-item">
+                            <div class="card-item__image">
+                                <img src="./images/features/self-serve-icon.png" alt="machines">
+                            </div>
+                            <h3 class="card-item__title">Coin & coinless machines</h3>
+                            <p class="card-item__description">Our environmentally friendly Huebsch® machines use less
+                                water and dry faster so you are done fast! You can pay with coins, the Upstate
+                                Laundromat loyalty card, Visa, or MasterCard. </p>
+                        </li>
+                        <li class="features__item card-item">
+                            <div class="card-item__image">
+                                <img src="./images/features/folded-shirt-icon.png" alt="t-shirt">
+                            </div>
+                            <h3 class="card-item__title">Fluff & fold service available</h3>
+                            <p class="card-item__description">Don’t waste valuable time doing your own laundry. Let us
+                                handle it for you! Offered 7 days a week, same day or next day available. We will notify
+                                you when your laundry is done via text.</p>
+                        </li>
+                        <li class="features__item card-item">
+                            <div class="card-item__image">
+                                <img src="./images/features/loyalty-card-icon.png" alt="card">
+                            </div>
+                            <h3 class="card-item__title">Loyalty Discounts</h3>
+                            <p class="card-item__description">Use your Upstate Laundromat personal loyalty card to earn
+                                special discounts over time. Make sure to register your card by <a target="_blank"
+                                    href="https://m.fascard.com/#Login">clicking here</a>&nbsp;or by downloading the
+                                Fascard Mobile app.&nbsp;</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="we-offer" id="we-offer">
+                <div class="we-offer__container container">
+                    <div class="we-offer__wrapper">
+                        <div class="we-offer__head">
+                            <h2 class="we-offer__title">We are on a mission to change the laundromat experience</h2>
+                            <p class="we-offer__subtitle">Here's what we offer:</p>
+                        </div>
+                        <div class="we-offer__body">
+                            <ul class="we-offer__items">
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/wifi-icon.png"
+                                            alt="wi-fi"></div>
+                                    <h3 class="item-offer__description">Free wifi</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/snowflake-icon.png"
+                                            alt="snow"></div>
+                                    <h3 class="item-offer__description">Air conditioning</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/chair-icon.png"
+                                            alt="chair"></div>
+                                    <h3 class="item-offer__description">Comfortable seating</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/cafe-table-icon.png"
+                                            alt="table"></div>
+                                    <h3 class="item-offer__description">Cafe table</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/charger-icon.png"
+                                            alt="charger"></div>
+                                    <h3 class="item-offer__description">Charging stations</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/hdtv-icon.png" alt="tv">
+                                    </div>
+                                    <h3 class="item-offer__description">5 HD 55" TVs</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/washing-machine-icon.png"
+                                            alt="washing machine"></div>
+                                    <h3 class="item-offer__description">35 hi tech machines</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/ipad-icon.png"
+                                            alt="i-pad"></div>
+                                    <h3 class="item-offer__description">Kid's Zone</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/attendant-icon.png"
+                                            alt="man"></div>
+                                    <h3 class="item-offer__description">On-site attendant</h3>
+                                </li>
+                                <li class="we-offer__item item-offer">
+                                    <div class="item-offer__image"><img src="./images/we-offer/security-camera-icon.png"
+                                            alt="camera"></div>
+                                    <h3 class="item-offer__description">Security cameras</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials" id="testimonials">
+                <div class="testimonials__container container">
+                    <div class="testimonials__head">
+                        <h2 class="testimonials__title">What People Are Saying</h2>
+                    </div>
+                    <div class="testimonials__body">
+                        <ul class="testimonials__items">
+                            <li class="testimonials__title__item item-testimonials">
+                                <div class="item-testimonials__content">
+                                    <div class="item-testimonials__head">
+                                        <h4 class="item-testimonials__name">gerss buezo</h4>
+                                        <div class="item-testimonials__rating"><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i><i class="star"
+                                                aria-hidden="true"></i><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="item-testimonials__body">
+                                        <p class="item-testimonials__date">Oct 23, 2023</p>
+                                        <p class="item-testimonials__comment"></p>
+                                    </div>
+                                </div>
+                                <div class="item-testimonials__logo">
+                                    <img src="./images/testimonials/google_sm.png" alt="google">
+                                </div>
+                            </li>
+                            <li class="testimonials__title__item item-testimonials">
+                                <div class="item-testimonials__content">
+                                    <div class="item-testimonials__head">
+                                        <h4 class="item-testimonials__name">Ebony Blaq</h4>
+                                        <div class="item-testimonials__rating"><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i><i class="star"
+                                                aria-hidden="true"></i><i class="empty-star" aria-hidden="true"></i><i
+                                                class="empty-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="item-testimonials__body">
+                                        <p class="item-testimonials__date">Aug 8, 2023</p>
+                                        <p class="item-testimonials__comment"></p>
+                                    </div>
+                                </div>
+                                <div class="item-testimonials__logo">
+                                    <img src="./images/testimonials/google_sm.png" alt="google">
+                                </div>
+                            </li>
+                            <li class="testimonials__title__item item-testimonials">
+                                <div class="item-testimonials__content">
+                                    <div class="item-testimonials__head">
+                                        <h4 class="item-testimonials__name">kimit kingdom</h4>
+                                        <div class="item-testimonials__rating"><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i><i class="star"
+                                                aria-hidden="true"></i><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="item-testimonials__body">
+                                        <p class="item-testimonials__date">Jul 7, 2023</p>
+                                        <p class="item-testimonials__comment">Fast hot dryers! In and out! Best by far!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item-testimonials__logo">
+                                    <img src="./images/testimonials/google_sm.png" alt="google">
+                                </div>
+                            </li>
+                            <li class="testimonials__title__item item-testimonials">
+                                <div class="item-testimonials__content">
+                                    <div class="item-testimonials__head">
+                                        <h4 class="item-testimonials__name">Zandra Butler</h4>
+                                        <div class="item-testimonials__rating"><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i><i class="star"
+                                                aria-hidden="true"></i><i class="star" aria-hidden="true"></i><i
+                                                class="star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="item-testimonials__body">
+                                        <p class="item-testimonials__date">Jun 30, 2023</p>
+                                        <p class="item-testimonials__comment"></p>
+                                    </div>
+                                </div>
+                                <div class="item-testimonials__logo">
+                                    <img src="./images/testimonials/google_sm.png" alt="google">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="testimonials__footer">
+                        <p>Powered by <a href="https://reviewsonmywebsite.com" target="_blank">ReviewsOnMyWebsite</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="questions" id="questions">
+                <div class="questions__container container">
+                    <h2 class="questions__title">
+                        Frequently Asked Questions
+                    </h2>
+                    <div class="questions__content">
+                        <div class="questions__column">
+                            <ul class="questions__items">
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        What are your hours?
+                                    </h4>
+                                    <p class="item-question__info">We're open 7 days/week from 8am to 10pm.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        What is the last wash time?
+                                    </h4>
+                                    <p class="item-question__info">The posted time for starting the last wash is 9:00
+                                        PM. This typically allows enough time for our customers to finish washing,
+                                        drying and folding their clothes by 10:00 PM.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        Is coin-less laundry really coin-less?
+                                    </h4>
+                                    <p class="item-question__info">All the machines work with a laundry card – you don’t
+                                        need to bring quarters. You can use cash, VISA or MasterCard to add value to a
+                                        laundry card that may be re-loaded as you use up the balance on your card.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        How do I get a new laundry card?
+                                    </h4>
+                                    <p class="item-question__info">You may get a laundry card by visiting the VTM (Value
+                                        Transfer Machine) at the back of the store. Follow the simple steps to get a
+                                        laundry card and add value by inserting cash, VISA or MasterCard. You can add
+                                        money to the card as needed. Our friendly staff is always available to assist
+                                        you if you need help with your transaction. There is also an available mobile
+                                        app, directions can be loacted near the kiosk at the back of the store. </p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        How do I add money to the card?
+                                    </h4>
+                                    <p class="item-question__info">You can add money to your card using cash, VISA or
+                                        MasterCard at the VTM (Value Transfer Machine) next to the office. Please see
+                                        the attendant if you need any assistance with your transaction. You can also
+                                        register your card with Fascard by </p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        Is my laundry card reusable/reloadable?
+                                    </h4>
+                                    <p class="item-question__info">Yes, the card will retain any unused balance for
+                                        future visits and can be reused and reloaded as often as needed. You can reload
+                                        your Fascard by <a href="https://m.fascard.com/#Login">clicking here</a> or
+                                        download their app in your devices app
+                                        store. Please note that other laudromats use the same system, however our cards
+                                        only work at our location. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="questions__column">
+                            <ul class="questions__items">
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        How do I register my laundry card?
+                                    </h4>
+                                    <p class="item-question__info">Registration can be completed by downloading the
+                                        FasCard Mobile App, or by <a href="https://m.fascard.com/#Login">clicking
+                                            here</a> Registration is very important
+                                        because it allows you to receive dicounts throughout the year and if you lose
+                                        your laundry card we can trasnfer the money to a new one. </p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        Why is the front load washer often a better choice?
+                                    </h4>
+                                    <p class="item-question__info">Top load washers are smaller capacity and less
+                                        efficient. Front washers provide a better wash and are gentler on your garments
+                                        due to their tumbling action. They need less soap (for example a double load
+                                        front load washer will need about 1 1/2 load’s worth of soap). Front load
+                                        washers are better value and more environmentally friendly.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        Can I wash my pillows in a front load washer?
+                                    </h4>
+                                    <p class="item-question__info">The posted time for starting the last wash is 9:00
+                                        You can – but you need to aware of a few things. Pillows can sometimes be
+                                        damaged during wash and may lose stuffing or lose it’s shape. Please use your
+                                        best judgment.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        Can I wash a down comforter?
+                                    </h4>
+                                    <p class="item-question__info">Comforters with down fillings take longer to dry. You
+                                        may need to air dry them at home to get the moisture out. Please take care to
+                                        dry them completely to prevent mildew.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        How do I add time to the dryers?
+                                    </h4>
+                                    <p class="item-question__info">You can add any amount of time to the dryer by
+                                        inserting your laundry card into the dryer until the desired drying time is
+                                        reached. Then press the START button. Please remember to take the card with you
+                                        when you are done adding time to the dryer.</p>
+                                </li>
+                                <li class="__questions__item item-question">
+                                    <h4 class="item-question__title">
+                                        What items should NOT be put in the dryer?
+                                    </h4>
+                                    <p class="item-question__info">Anything with rubber should NOT be placed into the
+                                        dryers on any temperature other than “air dry”. This includes all shoes and rugs
+                                        with rubber backing, or any other item that is made with any rubber or plastic
+                                        materials. They may become damaged and misshapen after being placed in the
+                                        dryer. Items containing rubber or plastic are not permitted in the dryers for
+                                        this reason.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="contact__container container">
+                    <div class="contact__col">
+                        <h3 class="contact__title">Contact</h3>
+                        <div class="contact__social">
+                            <a href="https://www.facebook.com/upstatelaundromat/?modal=admin_todo_tour"
+                                aria-label="facebook" class="contact__social-link">
+                                <img src="./images/contact/icon-facebook.png" alt="facebook"></a>
+                        </div>
+                        <div class="contact__location">
+                            <h4 class="contact__location-title"><i class="location-icon"></i><span>Location</span>
+                            </h4>
+                            <p class="contact__location-address">2600 Anderson Rd<br>
+                                Greenville, SC 29611</p>
+                        </div>
+                        <div class="contact__hours">
+                            <h4 class="contact__hours-title"><i class="hours-icon"></i><span>Hours</span></h4>
+                            <p class="contact__hours-info">Open every day from 8am-10pm<br>
+                                (Last wash at 8pm)</p>
+                        </div>
+                        <div class="contact__mail">
+                            <h4 class="contact__mail-title"><i class="mail-icon"></i><span>Email</span></h4>
+                            <a href="mailto:info@upstatelaundromat.com"
+                                class="contact__mail-link">info@upstatelaundromat.com</a>
+                        </div>
+                    </div>
+                    <div class="contact__col">
+                        <div class="contact__map"><iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.546268481752!2d-82.44306612362254!3d34.817355472878454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8858308faec0ae91%3A0x6958e29fe7a3f400!2s2600%20Anderson%20Rd%2C%20Greenville%2C%20SC%2029611!5e0!3m2!1sen!2sus!4v1699098908426!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                title="location" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" id="footer">
+            <div class="footer__container container">
+                <a href="#header" class="footer__back-to-top" aria-label="home">Back to top</a>
+                <div class="footer__news-letter">
+                    <h3 class="footer__news-letter-title">Join our mailing list for 10% off!</h3>
+                    <p class="footer__success-message">Thank you! </p>
+                    <div class="footer__form">
+                        <div class="footer__email">
+                            <p class="footer__message"></p>
+                            <input name="email" type="email" placeholder="Email Address">
+                        </div>
+
+                        <input value="Sign Up" type="submit">
+                    </div>
+                </div>
+                <p class="footer__info">info@upstatelaundromat.com&nbsp; |&nbsp; 2600 Anderson Rd, Greenville SC
+                    29611<br>© 2018 Upstate Laundromat. All rights reserved. Site by <a target="_blank"
+                        href="http://knapsackcreative.com/">Knapsack</a>.</p>
+                <div class="footer__logo"><img src="./images/footer/u-logo.png" alt="Upstate Laundromat"></div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
